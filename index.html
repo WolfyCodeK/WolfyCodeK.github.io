@@ -6,7 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The Wolf Inheritance Clock</title>
 	<link href="style.css" rel="stylesheet">
-	<script src="script.js" defer></script>
+	<Script>
+		var p1 = 50;
+		var p2 = 50;
+		document.getElementById("val1").innerHTML = p1;
+		document.getElementById("val2").innerHTML = p2;
+	</Script>
 </head>
 <body>
 	<div class="title">
@@ -22,16 +27,34 @@
 			JAKE
 		</div>
 
-		<div class="percentage">
+		<div id="val1" class="percentage">
 			50
 		</div>
 
-		<div class="percentage">
+        <script>
+            function changeval1(){
+				p1++;
+				p2--;
+                document.getElementById("val1").innerHTML = p1;
+				document.getElementById("val2").innerHTML = p2;
+            }
+        </script>
+
+		<div id="val2" class="percentage">
 			50
 		</div>
+
+		<script>
+            function changeval2(){
+                p2++;
+				p1--;
+                document.getElementById("val2").innerHTML = p2;
+				document.getElementById("val1").innerHTML = p1;
+            }
+        </script>
 		
-		<button>+</button>
-		<button>+</button>
+		<button onclick="changeval1()">+</button>
+		<button onclick="changeval2()">+</button>
 	</div>
 	
 </body>

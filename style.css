@@ -15,6 +15,7 @@ body {
   justify-content: center;
   align-content: center;
   grid-template-columns: repeat(2, 300px);
+  grid-template-rows: repeat(2, 100px);
 }
 
 .clock-grid > button {
@@ -31,6 +32,7 @@ body {
 
 .title {
   text-align: center;
+  margin: 3%;
   font-size: 70px;
 }
 
