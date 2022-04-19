@@ -11,6 +11,25 @@ body {
   background-attachment: fixed;
 }
 
+.reset-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(1, 200px);
+  grid-template-rows: repeat(1, 80px);
+}
+
+.reset-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+.reset-grid > button:hover {
+  background-color: rgba(255, 255, 255, .9);
+}
+
 .clock-grid {
   display: grid;
   justify-content: center;
@@ -45,23 +64,4 @@ body {
 .percentage {
   text-align: center;
   font-size: 50px;
-}
-
-.reset-grid {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  grid-template-columns: repeat(1, 200px);
-  grid-template-rows: repeat(1, 80px);
-}
-
-.reset-grid > button {
-  cursor: pointer;
-  font-size: 2rem;
-  outline: none;
-  background-color: rgba(255, 255, 255, .75);
-}
-
-.reset-grid > button:hover {
-  background-color: rgba(255, 255, 255, .9);
 }
