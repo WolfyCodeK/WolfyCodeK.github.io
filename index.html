@@ -6,12 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The Wolf Inheritance Clock</title>
 	<link href="style.css" rel="stylesheet">
-	<Script>
-		var p1 = 50;
-		var p2 = 50;
-		document.getElementById("val1").innerHTML = p1;
-		document.getElementById("val2").innerHTML = p2;
-	</Script>
 </head>
 <body>
 	<div class="title">
@@ -27,34 +21,42 @@
 			JAKE
 		</div>
 
-		<div id="val1" class="percentage">
-			50
-		</div>
+		<div id="val1" class="percentage"></div>
 
-        <script>
-            function changeval1(){
-				p1++;
-				p2--;
-                document.getElementById("val1").innerHTML = p1;
-				document.getElementById("val2").innerHTML = p2;
-            }
-        </script>
+		<div id="val2" class="percentage"></div>
 
-		<div id="val2" class="percentage">
-			50
-		</div>
+		<Script>
+			valInit();
 
-		<script>
-            function changeval2(){
-                p2++;
-				p1--;
-                document.getElementById("val2").innerHTML = p2;
-				document.getElementById("val1").innerHTML = p1;
-            }
-        </script>
+			function valInit() {
+				if (localStorage.p1) {
+					document.getElementById("val1").innerHTML = localStorage.p1;
+					document.getElementById("val2").innerHTML = localStorage.p2;
+				} else {
+					localStorage.p1 = 50;
+					localStorage.p2 = 50;
+				}
+			}
 		
-		<button onclick="changeval1()">+</button>
-		<button onclick="changeval2()">+</button>
+			function increaseVal1() {
+				localStorage.p1 = Number(localStorage.p1)+1;
+				localStorage.p2 = Number(localStorage.p2)-1;
+
+				document.getElementById("val1").innerHTML = localStorage.p1;
+				document.getElementById("val2").innerHTML = localStorage.p2;
+			}
+
+			function increaseVal2() {
+				localStorage.p1 = Number(localStorage.p1)-1;
+				localStorage.p2 = Number(localStorage.p2)+1;
+
+				document.getElementById("val1").innerHTML = localStorage.p1;
+				document.getElementById("val2").innerHTML = localStorage.p2;
+			}
+		</Script>
+
+		<button onclick="increaseVal1()">+</button>
+		<button onclick="increaseVal2()">+</button>
 	</div>
 	
 </body>
