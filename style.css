@@ -8,6 +8,7 @@ body {
   padding: 0;
   margin: 0;
   background: linear-gradient(to left, #55aacb, #063b74);
+  background-attachment: fixed;
 }
 
 .clock-grid {
@@ -44,4 +45,24 @@ body {
 .percentage {
   text-align: center;
   font-size: 50px;
+}
+
+.reset-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(1, 200px);
+  grid-template-rows: repeat(1, 80px);
+}
+
+.reset-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+
+.reset-grid > button:hover {
+  background-color: rgba(255, 255, 255, .9);
 }

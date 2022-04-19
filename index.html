@@ -35,20 +35,35 @@
 				} else {
 					localStorage.p1 = 50;
 					localStorage.p2 = 50;
+
+					document.getElementById("val1").innerHTML = localStorage.p1;
+					document.getElementById("val2").innerHTML = localStorage.p2;
 				}
 			}
 		
 			function increaseVal1() {
-				localStorage.p1 = Number(localStorage.p1)+1;
-				localStorage.p2 = Number(localStorage.p2)-1;
+				if (localStorage.p1 < 100) {
+					localStorage.p1 = Number(localStorage.p1)+1;
+					localStorage.p2 = Number(localStorage.p2)-1
 
-				document.getElementById("val1").innerHTML = localStorage.p1;
-				document.getElementById("val2").innerHTML = localStorage.p2;
+					document.getElementById("val1").innerHTML = localStorage.p1;
+					document.getElementById("val2").innerHTML = localStorage.p2;
+				}
 			}
 
 			function increaseVal2() {
-				localStorage.p1 = Number(localStorage.p1)-1;
-				localStorage.p2 = Number(localStorage.p2)+1;
+				if (localStorage.p2 < 100) {
+					localStorage.p1 = Number(localStorage.p1)-1;
+					localStorage.p2 = Number(localStorage.p2)+1
+					
+					document.getElementById("val1").innerHTML = localStorage.p1;
+					document.getElementById("val2").innerHTML = localStorage.p2;
+				}
+			}
+
+			function resetVals() {
+				localStorage.p1 = 50;
+				localStorage.p2 = 50;
 
 				document.getElementById("val1").innerHTML = localStorage.p1;
 				document.getElementById("val2").innerHTML = localStorage.p2;
@@ -57,6 +72,11 @@
 
 		<button onclick="increaseVal1()">+</button>
 		<button onclick="increaseVal2()">+</button>
+		
+	</div>
+
+	<div class="reset-grid">
+		<button onclick="resetVals()">RESET</button>
 	</div>
 	
 </body>
