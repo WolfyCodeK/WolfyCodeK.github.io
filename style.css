@@ -1,66 +1,85 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic', Arial, sans-serif;
-    font-weight: normal;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  background: linear-gradient(to left, #55aacb, #063b74);
-  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #1d1d1d;
+  color: #fff;
+  font-family: "Source Code Pro", monospace;
 }
 
-.reset-grid {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  grid-template-columns: repeat(1, 100px);
-  grid-template-rows: repeat(1, 40px);
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #333;
+  padding: 20px;
 }
 
-.reset-grid > button {
-  cursor: pointer;
-  outline: none;
-  background-color: rgba(255, 255, 255, .75);
+.sidebar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-size: 18px;
+  transition: color 0.2s ease-in-out;
 }
 
-.reset-grid > button:hover {
-  background-color: rgba(255, 255, 255, .9);
+.sidebar a.active {
+  font-weight: bold;
 }
 
-.clock-grid {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  grid-template-columns: repeat(2, 150px);
-  grid-template-rows: repeat(2, 50px);
+.sidebar a:hover {
+  color: #bbb;
 }
 
-.clock-grid > button {
-  cursor: pointer;
-  font-size: 2rem;
-  margin: 20%;
-  outline: none;
-  background-color: rgba(255, 255, 255, .75);
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 200px;
+  padding: 20px;
 }
 
-.clock-grid > button:hover {
-  background-color: rgba(255, 255, 255, .9);
-}
-
-.title {
+header {
   text-align: center;
-  margin: 3%;
-  font-size: 35px;
+  padding: 50px 0;
 }
 
-.name {
-  text-align: center;
-  font-size: 25px;
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.percentage {
+footer {
+  background-color: #111;
+  color: #fff;
   text-align: center;
-  font-size: 25px;
+  padding: 20px;
+  margin-top: auto;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+  
+  header {
+    font-size: 32px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    padding: 10px;
+  }
 }

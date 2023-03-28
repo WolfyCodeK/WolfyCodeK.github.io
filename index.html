@@ -1,83 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<title>The Wolf Inheritance Clock</title>
-	<link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programmer Website</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="title">
-		THE WOLF INHERITANCE CLOCK
-	</div>
+  <div class="sidebar">
+    <a href="#" class="active">Home</a>
+    <a href="projects.html">Projects</a>
+  </div>
 
-	<div class="clock-grid">
-		<div class="name">
-			ISAAC
-		</div>
-
-		<div class="name">
-			JAKE
-		</div>
-
-		<div id="val1" class="percentage"></div>
-
-		<div id="val2" class="percentage"></div>
-
-		<Script>
-			valInit();
-
-			function valInit() {
-				if (localStorage.p1) {
-					document.getElementById("val1").innerHTML = localStorage.p1;
-					document.getElementById("val2").innerHTML = localStorage.p2;
-				} else {
-					localStorage.p1 = 50;
-					localStorage.p2 = 50;
-
-					document.getElementById("val1").innerHTML = localStorage.p1;
-					document.getElementById("val2").innerHTML = localStorage.p2;
-				}
-			}
-		
-			function increaseVal1() {
-				if (localStorage.p1 < 100) {
-					localStorage.p1 = Number(localStorage.p1)+1;
-					localStorage.p2 = Number(localStorage.p2)-1
-
-					document.getElementById("val1").innerHTML = localStorage.p1;
-					document.getElementById("val2").innerHTML = localStorage.p2;
-				}
-			}
-
-			function increaseVal2() {
-				if (localStorage.p2 < 100) {
-					localStorage.p1 = Number(localStorage.p1)-1;
-					localStorage.p2 = Number(localStorage.p2)+1
-					
-					document.getElementById("val1").innerHTML = localStorage.p1;
-					document.getElementById("val2").innerHTML = localStorage.p2;
-				}
-			}
-
-			function resetVals() {
-				localStorage.p1 = 50;
-				localStorage.p2 = 50;
-
-				document.getElementById("val1").innerHTML = localStorage.p1;
-				document.getElementById("val2").innerHTML = localStorage.p2;
-			}
-		</Script>
-
-		<button onclick="increaseVal1()">+</button>
-		<button onclick="increaseVal2()">+</button>
-		
-	</div>
-
-	<div class="reset-grid">
-		<button onclick="resetVals()">RESET</button>
-	</div>
-	
+  <div class="main-content">
+    <header>
+      <h1>Welcome to my website</h1>
+    </header>
+    
+    <main>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet justo sit amet lorem venenatis fringilla vel vel augue. Nullam ac enim sodales, bibendum neque vitae, semper eros. Duis molestie metus ac eros tristique, a scelerisque mi tincidunt.</p>
+    </main>
+    
+    <footer>
+      <p>&copy; 2023 Programmer Website</p>
+    </footer>
+  </div>
 </body>
 </html>
