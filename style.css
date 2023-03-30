@@ -4,6 +4,17 @@ html, body {
   padding: 0;
 }
 
+a { 
+  text-decoration: none;
+  color: blue; 
+  vertical-align: middle; 
+}
+
+a:visited { text-decoration: none; color: blue; }
+a:hover { text-decoration: none; color:orange; }
+a:focus { text-decoration: none; color:orange; }
+a:active { text-decoration: none; color:teal; }
+
 body {
   display: flex;
   flex-direction: column;
