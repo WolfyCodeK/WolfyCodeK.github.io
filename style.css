@@ -6,11 +6,11 @@ html, body {
 
 a { 
   text-decoration: none;
-  color: blue; 
+  color: lightblue; 
   vertical-align: middle; 
 }
 
-a:visited { text-decoration: none; color: blue; }
+a:visited { text-decoration: none; color: plum; }
 a:hover { text-decoration: none; color:orange; }
 a:focus { text-decoration: none; color:orange; }
 a:active { text-decoration: none; color:teal; }
